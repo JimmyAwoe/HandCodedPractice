@@ -11,6 +11,8 @@ ReAct是一种Agent框架，这个框架允许Agent调用指定的工具。模�
 2. 工具调用的时候需要传入参数，但是这个参数不一定是一个query这样的格式，可能是一个严格限定
 的，比如要求输入日期，时间等等，这个约束不一定大模型能很好的跟随，所以要做好容错。
 3. 手撕对于写正则表达式有一定要求。
+4. 这里包含一个利用OpenAI接口的Agent实现，这类接口需要输入的prompt是特定格式，不能直接输入字符串。
+5. 似乎最后只会把action和observation这一部分作为历史继续传入，thought则不会进行传入。
 """
 
 # 思路来源于Hello-Agent:https://github.com/datawhalechina/hello-agents
